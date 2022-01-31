@@ -2,30 +2,19 @@ import styled from "styled-components";
 
 const StyledHome = styled.div`
   .banner {
-    justify-content: space-evenly;
+    justify-content: center;
     overflow: hidden;
     position: relative;
-  }
-
-  .featuredContent {
-    display: flex;
-  }
-
-  
-  .bannerImage {
-    opacity: 0.2;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: auto;
+    max-width: 1908px;
   }
 
   .title {
     opacity: 1;
     position: relative;
-    padding: 50px;
+    padding-top: 50px;
     text-align: center;
     color: rgb(60, 60, 60);
+    width: inherit;
   }
 
   .title h1 {
@@ -36,13 +25,17 @@ const StyledHome = styled.div`
   .title h2 {
     font-size: 30px;
   }
-  
+
+  .featuredContent {
+    display: flex;
+  }
+
   .featuredGame,
   .featuredNews,
   .featuredGiveaways {
-    width: 33%;
+    width: 25%;
     opacity: 1;
-    margin: 60px;
+    margin: 60px auto;
     padding: 20px;
     position: relative;
     display: block;
@@ -59,7 +52,7 @@ const StyledHome = styled.div`
   }
 
   .featImg {
-    width: 300px;
+    width: 70%;
     margin-bottom: 25px;
   }
 
@@ -74,7 +67,7 @@ const StyledHome = styled.div`
   }
 
   .myFavorites {
-    height:1000px;
+    height: 1000px;
     overflow: scroll;
   }
 
@@ -83,6 +76,7 @@ const StyledHome = styled.div`
     font-size: 40px;
     margin-bottom: 20px;
     color: rgb(60, 60, 60);
+    max-width: 1908px;
   }
 `;
 

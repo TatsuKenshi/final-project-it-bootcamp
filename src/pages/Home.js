@@ -59,9 +59,6 @@ const Home = ({
     <>
       <StyledHome>
         <div className="banner">
-          {/* banner image */}
-          <img src={img} alt="" className="bannerImage" />
-
           {/* title */}
           <div className="title">
             <h1>MY FREE GAMES</h1>

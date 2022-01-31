@@ -3,7 +3,6 @@ import styled from "styled-components";
 const StyledNav = styled.div`
   .nav {
     display: flex;
-    width: 100vw;
     justify-content: space-around;
     color: indianred;
     text-align: center;
@@ -11,6 +10,7 @@ const StyledNav = styled.div`
     font-size: 1.1rem;
     font-weight: 900;
     background: rgba(0, 255, 255, 0.2);
+    max-width: 1908px;
   }
 
   a {
