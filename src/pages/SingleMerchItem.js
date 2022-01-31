@@ -3,12 +3,10 @@ import { useParams } from "react-router";
 import { getOneMerchItem } from "../Service";
 import StyledSingleMerchItem from "../style/StyledSingleMerchItem";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
 const SingleMerchItem = ({ user, purchase, setPurchase, total, setTotal }) => {
   // one merch item state
   const [oneMerchItem, setOneMerchItem] = useState([]);
-  //console.log(purchase);
 
   // merch item id
   let { id } = useParams();
@@ -53,7 +51,7 @@ const SingleMerchItem = ({ user, purchase, setPurchase, total, setTotal }) => {
                         quantity: 1,
                         price: oneMerchItem.price,
                         itemPrice: oneMerchItem.price * oneMerchItem.quantity,
-                        shortDesc: oneMerchItem.shortDesc
+                        shortDesc: oneMerchItem.shortDesc,
                       },
                     ]);
 
@@ -65,15 +63,17 @@ const SingleMerchItem = ({ user, purchase, setPurchase, total, setTotal }) => {
                       (purchaseItem) => purchaseItem.id === found.id
                     );
                     copy[index].quantity += 1;
-                    copy[index].itemPrice = copy[index].quantity * copy[index].price
+                    copy[index].itemPrice =
+                      copy[index].quantity * copy[index].price;
                     setPurchase(copy);
                   }
 
-                  let sumArray = purchase.map((item)=> item.itemPrice).reduce((prev, curr)=>{
-                    return prev + curr
-                  },0)
+                  let sumArray = purchase
+                    .map((item) => item.itemPrice)
+                    .reduce((prev, curr) => {
+                      return prev + curr;
+                    }, 0);
                   setTotal(sumArray);
-
                 }}
               >
                 add to cart

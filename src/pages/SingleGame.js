@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import axios from "axios";
 import StyledSingleGame from "../style/StyledSingleGame";
-import { getUserById } from "../Service";
 
 const SingleGame = ({ user, setUser, setMyFavoriteGames }) => {
   // one game state

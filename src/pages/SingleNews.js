@@ -14,7 +14,6 @@ const SingleNews = ({ allNewsArray }) => {
   useEffect(() => {
     setOneNews(theOne);
   }, [allNewsArray]);
-  console.log(theOne);
 
   return (
     <StyledSingleNews>
@@ -25,10 +24,11 @@ const SingleNews = ({ allNewsArray }) => {
       </div>
 
       <div className="imgDiv">
-      <img src={oneNews?.main_image} alt="" className="img"/>
+        <img src={oneNews?.main_image} alt="" className="img" />
       </div>
 
-      <div className="mainText"
+      <div
+        className="mainText"
         dangerouslySetInnerHTML={{ __html: oneNews?.article_content }}
       ></div>
     </StyledSingleNews>

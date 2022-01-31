@@ -23,7 +23,7 @@ import Merch from "./pages/Merch";
 import SingleMerchItem from "./pages/SingleMerchItem";
 import Cart from "./pages/Cart";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   // initial states
@@ -91,16 +91,20 @@ function App() {
   }, [user, myFavoriteGames]);
 
   useEffect(() => {
-    if(user){
-      setPurchase([])
+    if (user) {
+      setPurchase([]);
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
-    setTotal(purchase.map((item)=> item.itemPrice).reduce((prev, curr)=>{
-      return prev + curr
-    },0))
-  }, [purchase])
+    setTotal(
+      purchase
+        .map((item) => item.itemPrice)
+        .reduce((prev, curr) => {
+          return prev + curr;
+        }, 0)
+    );
+  }, [purchase]);
 
   // return with router
   return (
@@ -169,7 +173,7 @@ function App() {
           </Route>
           <Route exact path="/cart">
             <Cart
-            user={user}
+              user={user}
               purchase={purchase}
               setPurchase={setPurchase}
               total={total}

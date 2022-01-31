@@ -1,9 +1,13 @@
-import { Link } from "react-router-dom";
 import StyledCartItem from "../style/StyledCartItem";
 
-const CartItem = ({ cartItem, user, purchase, setPurchase, total, setTotal }) => {
-
-
+const CartItem = ({
+  cartItem,
+  user,
+  purchase,
+  setPurchase,
+  total,
+  setTotal,
+}) => {
   return (
     <StyledCartItem>
       <div className="main">
@@ -22,7 +26,7 @@ const CartItem = ({ cartItem, user, purchase, setPurchase, total, setTotal }) =>
 
             let index = purchase.findIndex((item) => item.id === cartItem.id);
             copy[index].quantity -= 1;
-            copy[index].itemPrice = copy[index].quantity * copy[index].price
+            copy[index].itemPrice = copy[index].quantity * copy[index].price;
 
             setPurchase(copy);
 
@@ -33,12 +37,13 @@ const CartItem = ({ cartItem, user, purchase, setPurchase, total, setTotal }) =>
               setPurchase(copy);
             }
 
-            let sumArray = purchase.map((item)=> item.itemPrice).reduce((prev, curr)=>{
-              return prev + curr
-            },0)
+            let sumArray = purchase
+              .map((item) => item.itemPrice)
+              .reduce((prev, curr) => {
+                return prev + curr;
+              }, 0);
             setTotal(sumArray);
           }}
-          
         >
           -
         </button>
@@ -51,22 +56,22 @@ const CartItem = ({ cartItem, user, purchase, setPurchase, total, setTotal }) =>
 
             let index = purchase.findIndex((item) => item.id === cartItem.id);
             copy[index].quantity += 1;
-            copy[index].itemPrice = copy[index].quantity * copy[index].price
+            copy[index].itemPrice = copy[index].quantity * copy[index].price;
 
             setPurchase(copy);
 
-            let sumArray = purchase.map((item)=> item.itemPrice).reduce((prev, curr)=>{
-              return prev + curr
-            },0)
+            let sumArray = purchase
+              .map((item) => item.itemPrice)
+              .reduce((prev, curr) => {
+                return prev + curr;
+              }, 0);
             setTotal(sumArray);
           }}
         >
           +
         </button>
 
-        <span className="totalItemPrice">
-          ${cartItem.itemPrice}
-        </span>
+        <span className="totalItemPrice">${cartItem.itemPrice}</span>
       </div>
     </StyledCartItem>
   );

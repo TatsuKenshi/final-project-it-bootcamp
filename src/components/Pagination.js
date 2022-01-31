@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import StyledPagination from "../style/StyledPagination";
-import { Link } from "react-router-dom"
 
 const Pagination = ({
   displayArray,
@@ -13,12 +12,11 @@ const Pagination = ({
   let length = displayArray.length;
   let numberOfPages = Math.ceil(length / displayed);
   const [pages, setPages] = useState([]);
-  //const [currPage, setCurrPage] = useState(1);
 
   const changePage = (page) => {
     setCurrPage(page);
-    let start = displayed * (page - 1); // (1 - 1) * 10 = 0
-    let end = start + Number(displayed); // 0 + 10
+    let start = displayed * (page - 1);
+    let end = start + Number(displayed);
     setOnPage(displayArray.slice(start, end));
   };
 
@@ -58,12 +56,12 @@ const Pagination = ({
       </button>
       {pages.map((page) => (
         <button
-        className="button"
+          className="button"
           onClick={() => {
             changePage(page);
           }}
           key={page}
-          style={page == currPage ? { color: "red" } : {}}
+          style={page === currPage ? { color: "red" } : {}}
         >
           {page}
         </button>

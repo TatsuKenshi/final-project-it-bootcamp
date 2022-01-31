@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import StyledHome from "../style/StyledHome";
 import img from "../img/homebckgrd.jpg";
 import { Link } from "react-router-dom";
-import Game from "../components/Game";
 import FavoriteGame from "../components/FavoriteGame";
 
 const Home = ({
@@ -12,7 +11,7 @@ const Home = ({
   user,
   setUser,
   myFavoriteGames,
-  setMyFavoriteGames
+  setMyFavoriteGames,
 }) => {
   //featured game, news, and giveaway states
   const [featGame1, setFeatGame1] = useState([]);
@@ -42,7 +41,16 @@ const Home = ({
         <h1>My favorite games</h1>
         <div>
           {myFavoriteGames.map((favorite) => {
-            return <FavoriteGame key={favorite.id} game={favorite} user={user} setUser={setUser} myFavoriteGames={myFavoriteGames} setMyFavoriteGames={setMyFavoriteGames}/>;
+            return (
+              <FavoriteGame
+                key={favorite.id}
+                game={favorite}
+                user={user}
+                setUser={setUser}
+                myFavoriteGames={myFavoriteGames}
+                setMyFavoriteGames={setMyFavoriteGames}
+              />
+            );
           })}
         </div>
       </div>

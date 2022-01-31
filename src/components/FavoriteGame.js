@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import { getUserById } from "../Service";
 import StyledFavoriteGame from "../style/StyledFavoriteGame";
 import axios from "axios";
 
-const FavoriteGame = ({ game, user, setUser, myFavoriteGames, setMyFavoriteGames }) => {
+const FavoriteGame = ({ game, user, setUser, setMyFavoriteGames }) => {
   return (
     <>
       <StyledFavoriteGame>
@@ -25,8 +24,7 @@ const FavoriteGame = ({ game, user, setUser, myFavoriteGames, setMyFavoriteGames
           </Link>
           <button
             onClick={() => {
-
-                // kick the unfavorited game from the favoriteGames array on the logged in user's object
+              // kick the unfavorited game from the favoriteGames array on the logged in user's object
               let copy = user;
               let index = copy.favoriteGames.findIndex(
                 (item) => item.id === game.id
