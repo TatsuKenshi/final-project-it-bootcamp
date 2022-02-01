@@ -69,7 +69,7 @@ const SearchGames = ({ allGamesArray }) => {
               }}
             >
               <option id="choose" value="choose">
-                choose your favorite genre...
+                select a genre
               </option>
               {myGenres.map(function (genre) {
                 return (
@@ -86,7 +86,7 @@ const SearchGames = ({ allGamesArray }) => {
           <div className="inputSearch">
             <input
               type="text"
-              placeholder="or search games by name..."
+              placeholder="search games by name"
               onChange={(e) => {
                 setSelectValue2(e.target.value);
                 setCurrPage(1);
@@ -109,15 +109,15 @@ const SearchGames = ({ allGamesArray }) => {
       {/* end of Pagination */}
 
       <StyledSearchGames>
-      {/* game display */}
+        {/* game display */}
 
-      <div className="selectedGames">
-        {onPage.map(function (game) {
-          return <Game key={game.title} game={game} />;
-        })}
-      </div>
-      {/* end of game display */}
-        </StyledSearchGames>
+        <div className="selectedGames">
+          {onPage.map(function (game) {
+            return <Game key={game.title} game={game} />;
+          })}
+        </div>
+        {/* end of game display */}
+      </StyledSearchGames>
     </>
   );
 };
