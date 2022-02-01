@@ -78,7 +78,12 @@ const Nav = ({ user, setUser, purchase }) => {
       </div>
 
       {showSmall && (
-        <div className="small-menu">
+        <div
+          className="small-menu"
+          onClick={() => {
+            setShowSmall(false);
+          }}
+        >
           <div className="link-small">
             <Link to="/">Home</Link>
           </div>
