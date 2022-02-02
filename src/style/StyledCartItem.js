@@ -9,27 +9,27 @@ const StyledCartitem = styled.div`
   background: rgba(0, 255, 255, 0.2);
 
   .main {
-      margin-right: 20px;
-      color: indianred;
-      font-weight: 900;
-    }
-    
-    .img {
-        width: 200px;
-        height: 120px;
-        background: rgb(60, 60, 60);
-        text-align: center;
+    margin-right: 20px;
+    color: indianred;
+    font-weight: 900;
+  }
+
+  .img {
+    width: 200px;
+    height: 120px;
+    background: rgb(60, 60, 60);
+    text-align: center;
   }
 
   .img p {
-      padding-top: 45px;
+    padding-top: 45px;
   }
 
-  .info{
-      padding: 5px;
-      font-weight: 550;
-      color: rgb(60, 60, 60);
-      line-height:1.25rem;
+  .info {
+    padding: 5px;
+    font-weight: 550;
+    color: rgb(60, 60, 60);
+    line-height: 1.25rem;
   }
 
   button {
@@ -41,6 +41,31 @@ const StyledCartitem = styled.div`
     background: rgba(0, 255, 255, 0.2);
     font-weight: 900;
     color: indianred;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+    text-align: center;
+
+    .main {
+      width: 100%;
+    }
+
+    .img {
+      width: 100%;
+      margin: 0 auto;
+      height: 40vw;
+      text-align: center;
+    }
+
+    .info {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    button {
+      font-size: 1rem;
+    }
   }
 `;
 

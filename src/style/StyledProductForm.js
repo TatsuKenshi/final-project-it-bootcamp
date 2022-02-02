@@ -4,26 +4,21 @@ const StyledProductForm = styled.div`
   padding: 20px;
   color: rgb(60, 60, 60);
   font-weight: 900;
-  width: 50vw;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 920px;
+  margin: 30px auto;
   border: 1px solid cyan;
   background: rgba(0, 255, 255, 0.2);
-  color: rgb(60, 60, 60);
   border-radius: 40px;
   text-align: center;
 
   input {
     width: 360px;
     height: 30px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 20px;
+    margin: 5px 0 5px 20px;
     font-size: 1rem;
   }
 
   label {
-    margin-left: 20px;
     font-size: 1.25rem;
   }
 
@@ -36,6 +31,30 @@ const StyledProductForm = styled.div`
     background: rgba(0, 255, 255, 0.2);
     font-weight: 900;
     color: indianred;
+  }
+
+  @media (max-width: 1024px) {
+    width: 90vw;
+  }
+
+  @media (max-width: 768px) {
+    button {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    padding: 0 2vw;
+
+    input {
+      width: 90%;
+      margin: 5px auto;
+    }
+
+    button {
+      font-size: 1rem;
+      width: 90%;
+    }
   }
 `;
 

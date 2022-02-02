@@ -86,8 +86,7 @@ const StyledHome = styled.div`
   }
 
   .myFavorites {
-    height: 1000px;
-    overflow: scroll;
+    min-height: 75vh;
   }
 
   .myFavorites h1 {

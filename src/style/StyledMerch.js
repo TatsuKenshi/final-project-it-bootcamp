@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 const StyledMerch = styled.div`
-  .selectedMerch{
-      height: 600px;
-      overflow: scroll;
+  .selectedMerch {
+    min-height: 75vh;
   }
 
-  .goToCart{
+  .goToCart {
     text-align: end;
   }
 
@@ -18,6 +17,23 @@ const StyledMerch = styled.div`
     background: rgba(0, 255, 255, 0.2);
     font-weight: 900;
     color: indianred;
+  }
+
+  @media (max-width: 768px) {
+    .goToCart button {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .goToCart {
+      width: 95vw;
+      margin: 10px auto;
+    }
+
+    .goToCart button {
+      width: 100%;
+    }
   }
 `;
 

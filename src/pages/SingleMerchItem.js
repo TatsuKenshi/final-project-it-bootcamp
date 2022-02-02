@@ -33,10 +33,6 @@ const SingleMerchItem = ({ user, purchase, setPurchase, total, setTotal }) => {
             <div className="addToCart">
               <button
                 onClick={() => {
-                  /* let found = user.favoriteGames.find(
-                    (fave) => fave.id === Number(id)
-                  ); */
-
                   let found = purchase.find((purchasedItem) => {
                     return purchasedItem.id === oneMerchItem.id;
                   });
