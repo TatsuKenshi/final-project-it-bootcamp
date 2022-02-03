@@ -31,6 +31,7 @@ const SingleGame = ({ user, setUser, setMyFavoriteGames }) => {
       .catch(function (error) {
         console.error(error);
       });
+    // eslint-disable-next-line
   }, []);
 
   return (

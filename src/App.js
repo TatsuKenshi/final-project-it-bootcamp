@@ -94,6 +94,7 @@ function App() {
     if (user) {
       setPurchase([]);
     }
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {

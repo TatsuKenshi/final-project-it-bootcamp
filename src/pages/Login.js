@@ -6,7 +6,7 @@ import StyledLogin from "../style/StyledLogin";
 const Login = ({ setUser, user }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("")
+  const [error, setError] = useState("");
 
   const history = useHistory();
 
@@ -14,13 +14,14 @@ const Login = ({ setUser, user }) => {
     if (user) {
       setUser(user);
     }
+    // eslint-disable-next-line
   }, [user]);
 
   return (
     <StyledLogin>
-        <div className="text">
-          <h2>Log in</h2>
-        </div>
+      <div className="text">
+        <h2>Log in</h2>
+      </div>
 
       <div className="main">
         <form
@@ -67,11 +68,13 @@ const Login = ({ setUser, user }) => {
       </div>
 
       <div className="regLink">
-        <Link to="/register"><h3>Not registered?</h3></Link>
+        <Link to="/register">
+          <h3>Not registered?</h3>
+        </Link>
       </div>
 
       <div className="errorDiv">
-        <h3>{error? error : ""}</h3>
+        <h3>{error ? error : ""}</h3>
       </div>
     </StyledLogin>
   );

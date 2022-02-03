@@ -10,7 +10,7 @@ const StyledNav = styled.div`
     font-size: 1.1rem;
     font-weight: 900;
     background: rgba(0, 255, 255, 0.2);
-    max-width: 1908px;
+    max-width: 100%;
   }
 
   a {

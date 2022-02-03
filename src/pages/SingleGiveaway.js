@@ -15,8 +15,8 @@ const SingleGiveaWay = ({ allGiveawaysArray, user }) => {
 
   useEffect(() => {
     setOneGiveaway(theOne);
+    // eslint-disable-next-line
   }, [allGiveawaysArray]);
-  console.log(theOne);
 
   return user ? (
     <StyledSingleGiveaway>

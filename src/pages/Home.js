@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import StyledHome from "../style/StyledHome";
-import img from "../img/homebckgrd.jpg";
 import { Link } from "react-router-dom";
 import FavoriteGame from "../components/FavoriteGame";
 

@@ -22,11 +22,11 @@ const Register = () => {
   return (
     <StyledRegister>
       <div className="instructions">
-        <p>Username has to be at least four letters long</p>
-        <p>Email has to be in the valid format</p>
+        <p>1 - Username has to be at least four letters long</p>
+        <p>2 - Email has to be in the valid format</p>
         <p>
-          Password has to be at least 8 characters long, and contain a letter
-          and a number
+          3 - Password has to be at least 8 characters long, and contain a
+          letter and a number
         </p>
       </div>
 
@@ -36,7 +36,7 @@ const Register = () => {
 
       <div className="main">
         <form
-        className="registrationForm"
+          className="registrationForm"
           onSubmit={(e) => {
             e.preventDefault();
             if (username.length < 4 && !validPassword(password)) {
@@ -73,44 +73,43 @@ const Register = () => {
           }}
         >
           <div className="inputUser">
-
-          <input
-            type="text"
-            placeholder="username"
-            onChange={(e) => {
-              setUsername(e.target.value);
-            }}
+            <input
+              type="text"
+              placeholder="username"
+              onChange={(e) => {
+                setUsername(e.target.value);
+              }}
             />
-            </div>
+          </div>
 
-            <div className="inputEmail">
-          <input
-            type="text"
-            placeholder="email"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
+          <div className="inputEmail">
+            <input
+              type="text"
+              placeholder="email"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
             />
-            </div>
+          </div>
 
-            <div className="inputPassword">
-          <input
-            type="password"
-            placeholder="password"
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
+          <div className="inputPassword">
+            <input
+              type="password"
+              placeholder="password"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
             />
-            </div>
+          </div>
 
-            <div className="inputBtn">
-          <input type="submit" />
-            </div>
+          <div className="inputBtn">
+            <input type="submit" />
+          </div>
         </form>
       </div>
 
       <div className="errorDiv">
-        <h3>{error? error : ""}</h3>
+        <h3>{error ? error : ""}</h3>
       </div>
     </StyledRegister>
   );

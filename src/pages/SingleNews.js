@@ -13,6 +13,7 @@ const SingleNews = ({ allNewsArray }) => {
 
   useEffect(() => {
     setOneNews(theOne);
+    // eslint-disable-next-line
   }, [allNewsArray]);
 
   return (

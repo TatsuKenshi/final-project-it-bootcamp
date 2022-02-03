@@ -8,7 +8,7 @@ const StyledFooter = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  max-width: 1908px;
+  max-width: 100%;
 `;
 
 export default StyledFooter;

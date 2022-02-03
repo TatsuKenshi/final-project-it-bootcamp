@@ -16,6 +16,7 @@ const SingleMerchItem = ({ user, purchase, setPurchase, total, setTotal }) => {
     getOneMerchItem(id).then((res) => {
       setOneMerchItem(res.data);
     });
+    // eslint-disable-next-line
   }, []);
 
   return (

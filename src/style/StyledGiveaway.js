@@ -38,8 +38,12 @@ const StyledGiveaway = styled.div`
   @media (max-width: 768px) {
     display: block;
 
+    .main {
+      width: 100%;
+    }
+
     .main img {
-      width: 90%;
+      width: 100%;
     }
 
     button {

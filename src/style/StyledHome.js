@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import img from "../img/homebckgrnd.jpg";
 
 const StyledHome = styled.div`
   .banner {
     justify-content: center;
-    max-width: 1908px;
+    max-width: 100%;
+    background: url(${img});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .title {

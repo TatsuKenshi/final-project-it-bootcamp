@@ -26,6 +26,7 @@ const Pagination = ({
       tmp.push(i);
     }
     setPages(tmp);
+    // eslint-disable-next-line
   }, [displayed, displayArray]);
 
   return (
